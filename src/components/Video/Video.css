@@ -1,0 +1,68 @@
+.videoWrap{
+    position: relative;
+    z-index: 10;
+    background-color: black;
+ }
+ 
+ .home:hover .slogan,
+ .home:hover .popular{
+     transition: 1s;
+     left: 6.5%;
+ }
+ .sound{
+     position: absolute;
+     height: 30px;
+     width: 30px;
+     top: 75%;
+     right: 8%;
+     border: 2px solid greenyellow; 
+     border-radius: 50%;
+     z-index: 10;
+ }
+ 
+ .muted{
+     border: 2px solid red;
+     opacity: 0.5;
+ }
+ 
+ .sound:hover{
+     -webkit-transform: scale(1.2);
+     transform: scale(1.2);
+ }
+ 
+ .video{
+     height: 60vh;
+     object-fit: fill;
+     height: 90vh;
+     width: 100vw;
+ }
+ 
+ .slogan {
+     position: absolute;
+     top: 23%;
+     left: -100%;
+     font-size: 3vw;
+     font-family: 'Livvic', sans-serif;
+     color: white;
+     transition: 1s;
+     text-shadow: 1.5px 1.5px 3px white;
+ }
+ 
+ .popular{
+     position: absolute;
+     top: 82%;
+     left: -100%;
+     font-size: 1.8vw;
+     font-family: 'Livvic', sans-serif;
+     color: white;
+     transition: 1s;
+     text-shadow: 1px 1px 0.5px white;
+ }
+ 
+ @media(min-width:500px){
+    .video{
+     height: 90vh;
+     width: 100%;
+     object-fit: fill;
+    } 
+ }

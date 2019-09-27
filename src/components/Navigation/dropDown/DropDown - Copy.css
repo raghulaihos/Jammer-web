@@ -1,0 +1,77 @@
+.navDrop{
+    display: none;
+}
+
+@media(min-width:500px){
+    .browseShow{
+        display: none;
+    }
+    .tag{
+        display: none;
+        margin:  auto;
+
+        padding: 5px 10px;
+        position: relative;
+    }
+}
+
+@media(max-width:499px){
+    .dropWrap{
+        position: absolute;
+        top: 100;
+        left: 0px;
+    }
+.navDrop{
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    list-style: none;
+    color: white;
+    justify-content: center;
+    margin: auto 0;
+    padding: 0;
+    display: none; 
+
+}
+ .navDropDown{
+    height: 100%;
+    display: flex;
+    
+}
+.dontDrop{
+    /* border-bottom: .1px solid white; */
+    background: black;
+    padding : 5px;
+    display: none;
+    margin: auto 0;
+  
+}
+.drop{
+    border-bottom: 0.09px solid white;
+    background: black;
+    padding : 7px;
+    margin: auto 0;
+    text-align: center;
+    box-sizing: border-box;
+    /* background-color: red; */
+}
+
+.tag{
+    display: inline;
+    margin:  auto 6px;
+    /* margin-right: 0; */
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    /* background-color: rebeccapurple; */
+}
+#tag{
+    display: block;
+    margin:  auto 0;
+    padding: 5px;
+    color: white;
+}
+}

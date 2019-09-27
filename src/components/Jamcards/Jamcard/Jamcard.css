@@ -1,0 +1,50 @@
+.jamcard{
+    border: 1px solid black;
+    height: 18vh;
+    width: 20vw;
+    position: relative;
+    color: white;
+    margin-left: 2vw;
+}
+
+.jamcard:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    transition: 0.5s;
+    z-index: 50;
+}
+
+img{
+    height:100%;
+    width: 100%;
+}
+
+.name{
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    font-size: 2vw;
+}
+
+.location{
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    font-size: 1.2vw;
+    text-decoration-color: black;
+}
+
+.price{
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    font-size: 1.3vw
+}
+
+/* .nameloc{
+     background-color: grey; 
+    position: absolute;
+    top: 2%;
+    left: 0%;
+
+} */
