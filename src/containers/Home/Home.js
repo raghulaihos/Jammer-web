@@ -8,11 +8,10 @@ import jamroom1 from '../../assets/jamroom1.jpg';
 import jamroom2 from '../../assets/jamroom2.jpg';
 import jamroom3 from '../../assets/jamroom3.jpg';
 import jamroom4 from '../../assets/jamroom4.jpg';
-
+import vidSrc from '../../assets/enter-sandman.mp4';
 const jam_room_pics = [jamroom1,jamroom2,jamroom3,jamroom4];
-const vidSrc = 'https://p-def3.pcloud.com/cfZtww7UYZNtlC4mZHWarZZadfYN7ZQ5ZZuH0ZZeKrYzZQ5ZCkZX7ZW7ZHkZgJZK5ZI7Zp5Z80ZXFZH0ZpZTXZPGQ25YH4bfRil1Mzug6MUjN2uhPV/enter-sandman.mp4';
-class home extends Component {
 
+class home extends Component {
     state = {
         jampads: [],
         muted: false
