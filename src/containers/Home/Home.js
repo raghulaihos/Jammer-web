@@ -25,19 +25,19 @@ class home extends Component {
     }
 
     componentDidMount() {
-        axios.get('/jamcards')
-            .then(res => {
-                const jam_cards = [];
-                for(const key in res.data){
-                    jam_cards.push({
-                        ...res.data[key],
-                        pic: jam_room_pics[key],
-                        id: key
-                    })
-                }
+        // axios.get('/jamcards')
+        //     .then(res => {
+        //         const jam_cards = [];
+        //         for(const key in res.data){
+        //             jam_cards.push({
+        //                 ...res.data[key],
+        //                 pic: jam_room_pics[key],
+        //                 id: key
+        //             })
+        //         }
                 
-                this.setState({jampads:jam_cards});
-            }).catch(e=>console.log('error!!!',e));
+        //         this.setState({jampads:jam_cards});
+        //     }).catch(e=>console.log('error!!!',e));
     }
 
     render() {
