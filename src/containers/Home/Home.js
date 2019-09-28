@@ -9,6 +9,7 @@ import jamroom2 from '../../assets/jamroom2.jpg';
 import jamroom3 from '../../assets/jamroom3.jpg';
 import jamroom4 from '../../assets/jamroom4.jpg';
 import vidSrc from '../../assets/enter-sandman.mp4';
+
 const jam_room_pics = [jamroom1,jamroom2,jamroom3,jamroom4];
 
 class home extends Component {
