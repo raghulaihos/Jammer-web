@@ -29,9 +29,9 @@ class home extends Component {
         axios.get('/jamcards')
             .then(res => {
                 const jam_cards = [];
-                for(const key in res.data){
+                for(const key in res.data.jamcards){
                     jam_cards.push({
-                        ...res.data[key],
+                        ...res.data.jamcards[key],
                         pic: jam_room_pics[key],
                         id: key
                     })
