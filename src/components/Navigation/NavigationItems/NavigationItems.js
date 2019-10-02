@@ -10,7 +10,7 @@ const navigationItems = (props) => {
         <ul className='NavItems'>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/jam-pads'>Jam pads</NavLink></li>
-            <li><NavLink to='/bookings'>Bookings</NavLink></li>
+            <li><NavLink to='/auth'>Authentication</NavLink></li>
         </ul>
          <DropDown {...props}/> 
     </React.Fragment>);

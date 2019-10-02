@@ -5,3 +5,7 @@ const instance = axios.create({
 });
 
 export default instance;
+
+//https://jammer-server.herokuapp.com
+
+//http://localhost:3000
