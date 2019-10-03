@@ -9,6 +9,7 @@ class layout extends Component {
             { name: 'Jampads', value: '/jam-pads' },
             { name: 'Bookings', value: '/bookings' }
         ],
+        isAuth: false,
         scroll: false
     }
 
@@ -17,6 +18,14 @@ class layout extends Component {
         console.log(event.target.value);
         window.location.href = event.target.value;
         // this.context.history.push('/path');
+    }
+
+    componentWillMount() {
+        if (localStorage.getItem('token') && localStorage.getItem('user_id')) {
+            this.setState({
+                isAuth: true
+            })
+        }
     }
 
     componentDidMount() {
@@ -39,12 +48,25 @@ class layout extends Component {
         this.setState({scroll:false});
     }
 
+    authChangeHandler = (event) => {
+        console.log(event.target.value);
+        console.log(event.target.innerText);
+        if(event.target.innerText==='Logout'){
+            this.setState({
+                isAuth:false
+            })
+        }
+        localStorage.removeItem('token');
+        localStorage.removeItem('expiryDate');
+        localStorage.removeItem('user_id');
+        // this.props.history.replace('/');
+    }
 
     render() {
         return (
             <React.Fragment>
-                <Toolbar scroll={this.state.scroll} click={(event) => this.dropClickHandler(event)}
-                    links={this.state.links}
+              <Toolbar scroll={this.state.scroll} click={(event) => this.dropClickHandler(event)}
+                    links={this.state.links} isAuth={this.state.isAuth} authChange = {this.authChangeHandler}
                 />
                 <main>
                     {this.props.children}
