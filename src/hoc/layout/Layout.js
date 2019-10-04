@@ -25,35 +25,47 @@ class layout extends Component {
             this.setState({
                 isAuth: true
             })
-        }
+        } 
     }
+    
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('mousemove', this.checkAuth);
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
+    checkAuth = () => {
+        if (localStorage.getItem('token') && localStorage.getItem('user_id')) {
+            this.setState({
+                isAuth: true
+            })
+        }
+        // console.log(!localStorage.getItem('token') && !localStorage.getItem('user_id'));
+    }
+
     handleScroll = (event) => {
         // let scrollTop = event.srcElement.body.scrollTop,
         //     itemTranslate = Math.min(0, scrollTop / 3 - 60);
+        // console.log('scrolllllllll')
         let Yoffset = window.pageYOffset;
-       
-        if(Yoffset>25&&this.state.scroll!==true){  
-            this.setState({scroll:true});
+
+        if (Yoffset > 25 && this.state.scroll !== true) {
+            this.setState({ scroll: true });
         }
-        else if(Yoffset<25&&this.state.scroll!==false)
-        this.setState({scroll:false});
+        else if (Yoffset < 25 && this.state.scroll !== false)
+            this.setState({ scroll: false });
     }
 
     authChangeHandler = (event) => {
         console.log(event.target.value);
         console.log(event.target.innerText);
-        if(event.target.innerText==='Logout'){
+        if (event.target.innerText === 'Logout') {
             this.setState({
-                isAuth:false
+                isAuth: false
             })
         }
         localStorage.removeItem('token');
@@ -65,8 +77,8 @@ class layout extends Component {
     render() {
         return (
             <React.Fragment>
-              <Toolbar scroll={this.state.scroll} click={(event) => this.dropClickHandler(event)}
-                    links={this.state.links} isAuth={this.state.isAuth} authChange = {this.authChangeHandler}
+                <Toolbar scroll={this.state.scroll} click={(event) => this.dropClickHandler(event)}
+                    links={this.state.links} isAuth={this.state.isAuth} authChange={this.authChangeHandler}
                 />
                 <main>
                     {this.props.children}

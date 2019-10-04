@@ -4,12 +4,16 @@ import './NavigationItems.css'
 import DropDown from '../dropDown/DropDown';
 
 const navigationItems = (props) => {
+    const Auth = (
+        <React.Fragment>
+             <li><NavLink to='/search'>Search</NavLink></li>
+             <li onClick={props.authChange}><NavLink to='/'>Logout</NavLink></li>
+             </React.Fragment>
+    )
     return (<React.Fragment>
         <ul className='NavItems'>
             <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/jam-pads'>Jam pads</NavLink></li>
-            {props.isAuth? <li onClick={props.authChange}><NavLink to='/'>Logout</NavLink></li>
-            :<li onClick={props.authChange}><NavLink to='/auth/signup'>Sign up</NavLink></li> }
+            {props.isAuth? Auth:<li onClick={props.authChange}><NavLink to='/auth/signup'>Sign up</NavLink></li> }
         </ul>
          <DropDown {...props}/> 
     </React.Fragment>);

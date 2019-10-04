@@ -78,7 +78,6 @@ class Auth extends React.Component {
         this.props.history.push('/auth/signup');
     }
 
-    
     formSubmitHandler = (event) => {
         event.preventDefault();
         let user = {
