@@ -6,7 +6,7 @@ import Jamcard from './Jamcard/Jamcard';
 const jamcards = (props) => {
 
     return (
-        <div className='cardwrap'>
+        <div className='Cardwrap'>
             <Jamcard cards={props.cards} />
         </div>
     )

@@ -6,7 +6,7 @@ const jamcard = (props) => {
             {
                 props.cards.map(card => {
                     
-                    return (<div key={card.location} className='jamcard'>
+                    return (<div key={card.location} className='Jamcard'>
                                 <img alt ='jamroom' src={card.pic}/>
                                 {/* <div className='nameloc'> */} 
                                 <span className='name'>{card.name }</span>

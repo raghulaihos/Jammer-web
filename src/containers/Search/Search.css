@@ -1,5 +1,20 @@
 .Search{
     background-color: black;
-    height: 150vh;
+    height: 250vh;
     position: relative;
+}
+
+
+.Search p{
+    position: absolute;
+    top: 8%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 1.8vw;
+    font-family: 'Livvic', sans-serif;
+    box-sizing: border-box;
 }

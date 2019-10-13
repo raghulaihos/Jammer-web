@@ -17,6 +17,10 @@ class App extends Component{
       <Route path="/auth/signup" exact component={Auth_signup} />
       <Route path="/auth/signin" exact component={Auth_signin} />
       <Route path="/search" component={Search} />
+      {/* <Route path="/search/Bread_and_Jaam" exact component={Search} />
+      <Route path="/search/Astral_Studios" exact component={Search} />
+      <Route path="/search/Boom_Box_house" exact component={Search} />
+      <Route path="/search/Audio_Academyq" exact component={Search} /> */}
     </Layout>
     </div>
   );

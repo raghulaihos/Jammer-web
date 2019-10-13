@@ -26,6 +26,7 @@ class home extends Component {
     }
 
     componentDidMount() {
+      
         axios.get('/jamcards')
             .then(res => {
                 const jam_cards = [];
@@ -39,6 +40,7 @@ class home extends Component {
                 
                 this.setState({jampads:jam_cards});
             }).catch(e=>console.log('error!!!',e));
+
     }
 
     render() {

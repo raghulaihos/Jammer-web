@@ -1,23 +1,24 @@
-.Jamcard{
-    border: 1px solid black;
-    height: 18vh;
-    width: 20vw;
+.jamcard{
+    border: 1px solid rgb(56, 22, 22);
+    height: 40vh;
+    width: 60vw;
     position: relative;
     color: white;
-    margin-left: 2vw;
+    margin-top: 2%;
 }
 
-
-.Jamcard:hover{
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+.jamcard:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
     transition: 0.5s;
     z-index: 50;
+    cursor: pointer;
 }
 
 img{
     height:100%;
     width: 100%;
+    border-radius: 1%;
 }
 
 .name{
@@ -41,11 +42,3 @@ img{
     left: 2%;
     font-size: 1.3vw
 }
-
-/* .nameloc{
-     background-color: grey; 
-    position: absolute;
-    top: 2%;
-    left: 0%;
-
-} */

@@ -1,27 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2289a20dc1a8f16168064f41056456f",
+    "revision": "ff51aac3a74a608aa2cbb271a25112e2",
     "url": "/index.html"
   },
   {
-    "revision": "ca81f9c6bdfb4bf51118",
+    "revision": "c773e068d10f1be53c1b",
     "url": "/static/css/2.4b14b85e.chunk.css"
   },
   {
-    "revision": "5b3e0cfffcd856b2cbf9",
-    "url": "/static/css/main.e9c2602e.chunk.css"
+    "revision": "1301ddacd66bc8bb8504",
+    "url": "/static/css/main.0ba75f5a.chunk.css"
   },
   {
-    "revision": "ca81f9c6bdfb4bf51118",
-    "url": "/static/js/2.fa08de38.chunk.js"
+    "revision": "c773e068d10f1be53c1b",
+    "url": "/static/js/2.d6030480.chunk.js"
   },
   {
-    "revision": "5b3e0cfffcd856b2cbf9",
-    "url": "/static/js/main.6f14e4b3.chunk.js"
+    "revision": "1301ddacd66bc8bb8504",
+    "url": "/static/js/main.1d23ee06.chunk.js"
   },
   {
     "revision": "9bf0e147d4ad480bf0cd",
     "url": "/static/js/runtime~main.1fc4146f.js"
+  },
+  {
+    "revision": "c1b641bf07eb3cf3642d5f121aa78960",
+    "url": "/static/media/amplifier.c1b641bf.jpg"
+  },
+  {
+    "revision": "a654a6e330e3f95d24ebd2145dfcf54f",
+    "url": "/static/media/cables.a654a6e3.jpg"
+  },
+  {
+    "revision": "3e0c4371c768a8eaa52be425a8acc10e",
+    "url": "/static/media/console.3e0c4371.jpg"
+  },
+  {
+    "revision": "e32ba36f2fbbc96a9ffb35f02f65297f",
+    "url": "/static/media/drums.e32ba36f.jpg"
   },
   {
     "revision": "be6b9a35aac1b6a43ab1e2526800f95f",

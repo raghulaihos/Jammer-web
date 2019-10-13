@@ -1,0 +1,9 @@
+.searchwrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 12%;
+    align-items: center;
+    z-index: 20;
+}
