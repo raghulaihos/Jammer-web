@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
-
+import './Layout.css';
 class layout extends Component {
 
     state = {
@@ -79,7 +79,7 @@ class layout extends Component {
                 <Toolbar scroll={this.state.scroll} click={(event) => this.dropClickHandler(event)}
                     links={this.state.links} isAuth={this.state.isAuth} authChange={this.authChangeHandler}
                 />
-                <main>
+                <main className='main'>
                     {this.props.children}
                 </main>
             </React.Fragment>

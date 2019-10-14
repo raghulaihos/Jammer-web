@@ -5,11 +5,11 @@ const Card = (props) => {
         <React.Fragment>
             {
                 props.jampads.map(card => {
-                    return (<div onClick={()=>props.click(card.name)} key={card.location} className='jamcard'>
+                    return (<div onClick={()=>props.click(card.name, card.price)} key={card.location} className='jamcard'>
                     <img alt ='jamroom' src={card.pic}/>
                     <span className='name'>{card.name }</span>
                     <span className='location'>{card.location}</span>
-                    <span className='price'>Price range {card.price}</span>                    
+                    <span className='price'>Price /hr : {card.price}</span>                    
                 </div>);
                 })
             }

@@ -1,0 +1,53 @@
+.slotwrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    top: 33%;
+    width: 100%;
+    position: absolute;
+    height: 10%;
+}
+.slot_booked{
+    background-color: goldenrod;
+    color: rgb(56, 22, 22);
+    font-size: 1.8vw;
+    font-family: 'Livvic', sans-serif;
+    height: 5vh;
+    width: 12vh;
+    margin:0.5%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slot_green{
+    background-color: greenyellow;
+    color: rgb(56, 22, 22);;
+    font-size: 1.8vw;
+    font-family: 'Livvic', sans-serif;
+    height: 5vh;
+    width: 12vh;
+    margin:0.5%;
+    text-align: center;
+    cursor: pointer;
+}
+.slot_red{
+    background-color: rgb(56, 22, 22);
+    color: white;
+    font-size: 1.8vw;
+    font-family: 'Livvic', sans-serif;
+    height: 5vh;
+    width: 12vh;
+    margin:0.5%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.time{
+    color: white;
+    font-size: .8vw;
+    font-family: 'Livvic', sans-serif;
+    height: 5vh;
+    width: 12vh;
+    margin:.5%;
+    text-align: center; 
+}

@@ -1,0 +1,50 @@
+.wrapper{
+    height: 150vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* z-index: 200; */
+    position: relative;
+}
+
+.confirmbox{
+    position: absolute;
+    margin-left: auto;
+    left: 0;
+    right:0;
+    margin-right: auto;
+    height: 40vh;
+    width: 50vh;
+    background-color: whitesmoke;
+    color:  rgb(56, 22, 22);
+    top:18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.confirmbox div{
+    color:  rgb(56, 22, 22);
+    font-size: 2vw;
+    font-family: 'Livvic', sans-serif;
+
+}
+
+.btn_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%; 
+}
+
+.confirm{
+    background-color: green;
+    padding: 3%;
+    cursor: pointer;
+}
+
+.cancel{
+    background-color: red;
+    margin-left: 10%;
+    padding: 3%;
+    cursor: pointer;
+}

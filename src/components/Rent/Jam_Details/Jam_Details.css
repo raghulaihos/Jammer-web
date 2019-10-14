@@ -5,18 +5,18 @@
 
 .details_wrap:hover .img1_wrapper{
     transition: .2s;
-    top: 10%;
+    top: 6%;
 }
 
 .details_wrap:hover .img2_wrapper{
     transition: .2s;
-    top: 10%;
+    top: 6%;
 }
 
 
 .details_wrap p{
     position: absolute;
-    top: 8%;
+    top: 6%;
     color: white;
     margin-left: auto;
     margin-right: auto;

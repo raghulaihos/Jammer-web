@@ -1,7 +1,7 @@
 .equipments{
     background-color: rgb(56, 22, 22);
     position: absolute;
-    top: 13%;
+    top: 9.5%;
     border-radius: 3%;
     margin-left: auto;
     margin-right: auto;
@@ -13,12 +13,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all 0.3s ease-out;
-    transform: 'translateY(0)';
 }
 
 .details{
     color: white;
     font-size: 2vw;
     font-family: 'Livvic', sans-serif;
+}
+
+.book{
+    background-color: red;
+    color: rgb(56, 22, 22);;
+    font-size: 1.8vw;
+    font-family: 'Livvic', sans-serif;
+    height: 5vh;
+    width: 12vh;
+    margin:auto;
+    text-align: center;
+    cursor: pointer;
 }

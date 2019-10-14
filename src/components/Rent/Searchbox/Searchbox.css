@@ -1,0 +1,33 @@
+.searchw{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4%;
+    right: 2%;  
+}
+
+.searchbox{
+    font-size: 1.5vw;
+    font-family: 'Livvic', sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.drop{
+    font-size: 1.5vw;
+    font-family: 'Livvic', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+    padding: 0;
+}
+
+.drop li{
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 1%;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
