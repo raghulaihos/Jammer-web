@@ -102,7 +102,8 @@ class Jam_Details extends React.Component {
         let slots = this.state.slots;
         let data = {
             slots:slots,
-            room_name:this.props.room_name
+            room_name:this.props.room_name,
+            cost:this.state.total_price
         }
     
         axios.put('/book', data, {
