@@ -8,7 +8,7 @@ const Searchbox = (props) => {
         <ul className="drop">
             {
                 props.filt.map(val=>{
-                    return (<li key={val.id}>{val.name}</li>)
+                    return (<li onClick={()=>props.click(val.name, val.price)} key={val.id}>{val.name}</li>)
                 })
             }
         </ul>

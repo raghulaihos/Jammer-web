@@ -53,17 +53,12 @@ class Search extends React.Component {
     }
 
     rent_click_handler = (jam_room, p) => {
-        console.log('clicked!');
         this.setState({ jam_pad: jam_room, price: p }, () => {
-            console.log(this.state.jam_pad);
-            console.log(this.props.match.url + '/' + jam_room);
             this.props.history.push(this.props.match.url + '/' + jam_room);
-            // this.props.history.push(this.props.match.url+'/raghu'); 
         });
     }
 
     searchbox_hander = (event) => {
-        console.log(this.state.jampads)
         let arr = this.state.jampads.filter(val => {
             if (val.name.toLowerCase().includes(event.target.value.toLowerCase())) {
                 return val.name;
@@ -82,7 +77,7 @@ class Search extends React.Component {
         let jampads;
         if (!this.state.jam_pad) {
             jampads = (<React.Fragment><p>Available jam rooms for rent</p>
-                <Searchbox filt={this.state.search_filter} change={this.searchbox_hander} jampads={this.state.jampads}></Searchbox>
+                <Searchbox filt={this.state.search_filter} click={this.rent_click_handler} change={this.searchbox_hander} jampads={this.state.jampads}></Searchbox>
                 <Rent click={this.rent_click_handler} jampads={this.state.jampads}></Rent>
             </React.Fragment>);
         }
