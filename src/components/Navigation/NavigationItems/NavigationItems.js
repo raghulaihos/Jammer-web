@@ -13,7 +13,7 @@ const navigationItems = (props) => {
     return (<React.Fragment>
         <ul className='NavItems'>
             <li><NavLink to='/'>Home</NavLink></li>
-            {props.isAuth? Auth:<li onClick={props.authChange}><NavLink to='/auth/signup'>Sign up</NavLink></li> }
+            {props.isAuth? Auth:<li onClick={props.authChange}><NavLink to='/auth/signin'>Sign in</NavLink></li> }
         </ul>
          <DropDown {...props}/> 
     </React.Fragment>);

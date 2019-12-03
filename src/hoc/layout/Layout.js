@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import Footer from '../../components/Footer/Footer';
 import './Layout.css';
 class layout extends Component {
 
@@ -81,7 +82,9 @@ class layout extends Component {
                 />
                 <main className='main'>
                     {this.props.children}
+                
                 </main>
+               
             </React.Fragment>
         );
     }

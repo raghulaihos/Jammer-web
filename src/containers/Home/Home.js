@@ -9,7 +9,7 @@ import jamroom2 from '../../assets/jamroom2.jpg';
 import jamroom3 from '../../assets/jamroom3.jpg';
 import jamroom4 from '../../assets/jamroom4.jpg';
 import vidSrc from '../../assets/enter-sandman.mp4';
-
+import Footer from '../../components/Footer/Footer';
 const jam_room_pics = [jamroom1,jamroom2,jamroom3,jamroom4];
 
 class home extends Component {
@@ -45,10 +45,13 @@ class home extends Component {
 
     render() {
         return (
+            <React.Fragment>
             <div className='home'>
                 <Video isMuted={this.state.muted} click={this.soundClickHandler} src={vidSrc} sound={soundSrc} />
                 <JamCards cards={this.state.jampads} />
             </div>
+                <Footer></Footer>
+                </React.Fragment>
         );
     }
 }

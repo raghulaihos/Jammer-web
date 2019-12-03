@@ -10,7 +10,8 @@ import jamroom1 from '../../assets/jamroom1.jpg';
 import jamroom2 from '../../assets/jamroom2.jpg';
 import jamroom3 from '../../assets/jamroom3.jpg';
 import jamroom4 from '../../assets/jamroom4.jpg';
-const jam_room_pics = [jamroom1, jamroom2, jamroom3, jamroom4];
+import jamroom5 from '../../assets/jamroom5.jpg';
+const jam_room_pics = [jamroom1, jamroom2, jamroom3, jamroom4, jamroom5];
 
 class Search extends React.Component {
 

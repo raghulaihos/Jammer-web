@@ -20,6 +20,10 @@ import AA1 from '../../../assets/Audio Academy/cables.jpg';
 import AA2 from '../../../assets/Audio Academy/console.jpg';
 import AA3 from '../../../assets/Audio Academy/drums.jpg';
 import AA4 from '../../../assets/Audio Academy/amplifier.jpg';
+import SG1 from '../../../assets/SoundGlitz/cables.jpg';
+import SG2 from '../../../assets/SoundGlitz/console.jpg';
+import SG3 from '../../../assets/SoundGlitz/drums.jpg';
+import SG4 from '../../../assets/SoundGlitz/amplifier.jpg';
 
 
 class Jam_Details extends React.Component {
@@ -32,6 +36,7 @@ class Jam_Details extends React.Component {
         AS: [AS1, AS2, AS3, AS4],
         BBH: [BBH1, BBH2, BBH3, BBH4],
         AA: [AA1, AA2, AA3, AA4],
+        SG:[SG1,SG2,SG3,SG4],
         pic_src: [],
         slots: [],
         confirm_booking: false
@@ -57,6 +62,10 @@ class Jam_Details extends React.Component {
                 this.setState({ pic_src: arr });
             } else if (this.props.room_name === 'Audio Academy') {
                 let arr = [...this.state.AA];
+                this.setState({ pic_src: arr });
+            }
+            else if (this.props.room_name === 'SoundGlitz Studios') {
+                let arr = [...this.state.SG];
                 this.setState({ pic_src: arr });
             }
             for (const key in res.data.equipment) {
