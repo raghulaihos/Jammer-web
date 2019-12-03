@@ -4,9 +4,9 @@ import './Footer.css';
  const footer = (props)=>{
     return (
         <footer>                  
-        <div class="footer-bottom">
-            <div class="container">
-                <p class="pull-left copyright"> Copyright © Jammer 2019. All right reserved. </p>          
+        <div className="footer-bottom">
+            <div className="container">
+                <p className="pull-left copyright"> Copyright © Jammer 2019. All right reserved. </p>          
             </div>
         </div>
     </footer>

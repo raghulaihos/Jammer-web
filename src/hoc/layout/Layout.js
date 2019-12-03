@@ -11,6 +11,7 @@ class layout extends Component {
             { name: 'Bookings', value: '/bookings' }
         ],
         isAuth: false,
+        check: false,
         scroll: false
     }
 
@@ -28,10 +29,10 @@ class layout extends Component {
             })
         } 
     }
-
+    
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
-        window.addEventListener('mousemove', this.checkAuth);
+        window.addEventListener('mouseover', this.checkAuth);     
     }
 
     componentWillUnmount() {
@@ -44,13 +45,9 @@ class layout extends Component {
                 isAuth: true
             })
         }
-        // console.log(!localStorage.getItem('token') && !localStorage.getItem('user_id'));
     }
 
     handleScroll = (event) => {
-        // let scrollTop = event.srcElement.body.scrollTop,
-        //     itemTranslate = Math.min(0, scrollTop / 3 - 60);
-        // console.log('scrolllllllll')
         let Yoffset = window.pageYOffset;
 
         if (Yoffset > 25 && this.state.scroll !== true) {
@@ -67,11 +64,10 @@ class layout extends Component {
             this.setState({
                 isAuth: false
             })
+            localStorage.removeItem('token');
+            localStorage.removeItem('expiryDate');
+            localStorage.removeItem('user_id');
         }
-        localStorage.removeItem('token');
-        localStorage.removeItem('expiryDate');
-        localStorage.removeItem('user_id');
-        // this.props.history.replace('/');
     }
 
     render() {
