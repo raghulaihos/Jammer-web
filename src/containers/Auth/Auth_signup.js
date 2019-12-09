@@ -50,6 +50,7 @@ class Auth extends React.Component {
             }
         },
         formIsValid: false,
+        auth:undefined
     }
 
 
@@ -102,14 +103,22 @@ class Auth extends React.Component {
         }
         console.log('calling signup');
         axios.put('/auth/signup', user).then(res => {
+            this.setState({auth:true});
             this.props.history.replace('/auth/signin');
-        }).catch(e => console.log('Sign up failed!'));
+        }).catch(e => {
+            this.setState({auth:false});
+            console.log('Sign up failed!')
+        });
     }
     swicthAuthHandler = () => {
         this.props.history.push('/auth/signin');
     }
     render() {
         const formElementsArray = [];
+        let message  = null;
+        if(this.state.auth==false){
+            message = <div>User already exists</div>;
+        }
         for (let key in this.state.controls) {
             formElementsArray.push({
                 id: key,
@@ -134,6 +143,7 @@ class Auth extends React.Component {
                     {form}
                     <Button btnType="Success" disabled={!this.state.formIsValid}>Signup</Button>
                     <Button btnType="Danger" clicked={this.swicthAuthHandler}>Sign in instead?</Button>
+                    {message}
                 </form>
             </div>
         )

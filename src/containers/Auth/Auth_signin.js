@@ -94,7 +94,7 @@ class Auth extends React.Component {
             this.setAutoLogout(remainingMilliseconds);
             console.log('signin complete', res);
             this.props.history.replace('/');
-            this.setState({auth:false});
+            this.setState({auth:true});
         }).catch(e => {
             this.setState({auth:false});
             console.log('Sign in failed!');
