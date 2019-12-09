@@ -17,7 +17,7 @@ const Equipments = (props) => {
             </React.Fragment>
             <br/>
             <div className='details'>
-            Total Price: {props.total_price}
+            Total Price: Rs {props.total_price}
             </div>
             <br/>
             <div onClick={props.click} className='book'>

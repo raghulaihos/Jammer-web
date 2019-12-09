@@ -111,7 +111,15 @@ class Jam_Details extends React.Component {
         if(this.state.total_price>0)
         this.setState(prev => ({
             confirm_booking: !prev.confirm_booking
-        }))
+        }));
+    }
+
+    reset_price_state = () => {
+        if(this.state.total_price>0)
+        this.setState(prev => ({
+            confirm_booking: !prev.confirm_booking,
+            total_price:0
+        }));
     }
 
     send_booking_handler = () => {
@@ -130,7 +138,7 @@ class Jam_Details extends React.Component {
         }).then(res=>{
             const slot_arr = Object.keys(res.data.rows[0].slots).map(i => res.data.rows[0].slots[i])
             this.setState({ slots: slot_arr });
-            this.confirm_booking_handler();
+            this.reset_price_state();
         })
     }
 

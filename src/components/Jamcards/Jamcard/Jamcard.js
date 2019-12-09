@@ -12,7 +12,7 @@ const jamcard = (props) => {
                                 <span className='name'>{card.name }</span>
                                 <span className='location'>{card.location}</span>
                                 {/* </div> */}
-                                <span className='price'>Price range {card.price}</span>                    
+                                <span className='price'>Price range Rs: {card.price}</span>                    
                             </div>);
                 })
             }

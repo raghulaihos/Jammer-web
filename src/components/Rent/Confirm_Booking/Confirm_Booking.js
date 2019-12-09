@@ -9,7 +9,7 @@ const Confirm_Booking =(props)=>{
                 <div onClick={props.confirm_click} className="confirm">Confirm</div>
                 <div onClick={props.cancel_click} className="cancel">Cancel</div>
                 </div>
-                <div>Total Price : {props.total_price}</div>
+                <div>Total Price : Rs {props.total_price}</div>
             </div>
         </div>
     )

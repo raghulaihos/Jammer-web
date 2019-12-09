@@ -37,7 +37,8 @@ class Auth extends React.Component {
                 touched: false
             }
         },
-        formIsValid: false
+        formIsValid: false,
+        auth:undefined
     }
     checkValidity = (value, rules) => {
         let isValid = true;
@@ -93,7 +94,11 @@ class Auth extends React.Component {
             this.setAutoLogout(remainingMilliseconds);
             console.log('signin complete', res);
             this.props.history.replace('/');
-        }).catch(e => console.log('Sign in failed!'));
+            this.setState({auth:false});
+        }).catch(e => {
+            this.setState({auth:false});
+            console.log('Sign in failed!');
+        });
     }
 
     setAutoLogout = milliseconds => {
@@ -128,13 +133,18 @@ class Auth extends React.Component {
                 shouldValidate={formElement.config.validation}
                 touched={formElement.config.touched}
             />
-        ))
+        ));
+        let message  = null;
+        if(this.state.auth==false){
+            message = <div>Invalid credentials</div>;
+        }
         return (
             <div className='Auth'>
                 <form onSubmit={this.formSubmitHandler}>
                     {form}
                     <Button btnType="Success" disabled={!this.state.formIsValid}>Login</Button>
                     <Button btnType="Danger" clicked={this.swicthAuthHandler}>Sign up instead?</Button>
+                    {message}
                 </form>
             </div>
         )
